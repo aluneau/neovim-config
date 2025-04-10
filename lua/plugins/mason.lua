@@ -17,8 +17,7 @@ return {
                 "ts_ls",
                 "pyright",
                 "tailwindcss",
-                "gopls",
-          },
+            },
         })
 
         require("mason-tool-installer").setup({
