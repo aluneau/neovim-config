@@ -6,6 +6,7 @@ vim.g.loaded_netrwPlugin = 1
 
 local global = vim.g
 local o = vim.opt
+vim.g.mapleader = ";"
 
 require("user.options")
 require("config.lazy")
@@ -18,7 +19,6 @@ require'cmp'.setup {
 require("scrollbar").setup()
 require('gitsigns').setup()
 
-vim.g.mapleader = ";"
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-A>', ':split | resize 20 | terminal<CR>', { noremap = true, silent = true })
 local builtin = require('telescope.builtin')
