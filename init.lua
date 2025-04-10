@@ -6,7 +6,6 @@ vim.g.loaded_netrwPlugin = 1
 
 local global = vim.g
 local o = vim.opt
-vim.g.mapleader = ";"
 
 require("user.options")
 require("config.lazy")
