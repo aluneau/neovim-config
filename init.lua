@@ -11,6 +11,12 @@ require("config.lazy")
 require("user.colorscheme")
 require('gitsigns').setup()
 require("user.colorscheme")
+require("colorizer").setup({
+  user_default_options = {
+    css_fn = false,
+    css = true,
+  },
+})
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-A>', ':split | resize 20 | terminal<CR>', { noremap = true, silent = true })
 local builtin = require('telescope.builtin')
