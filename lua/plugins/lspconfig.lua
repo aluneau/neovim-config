@@ -39,6 +39,7 @@ return {
         end
 
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local npm_global_root = vim.fn.trim(vim.fn.system("npm root -g"))
 
         mason_lspconfig.setup_handlers({
             function(server)
@@ -51,6 +52,16 @@ return {
                 nvim_lsp["ts_ls"].setup({
                     on_attach = on_attach,
                     capabilities = capabilities,
+                    init_options = {
+                      plugins = {
+                        {
+                          name = "@vue/typescript-plugin",
+                          location = npm_global_root .. "/@vue/language-server", 
+                          languages = { "vue" },
+                        }
+                      }
+                    },
+                    filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
                 })
             end,
             ["cssls"] = function()
@@ -89,7 +100,20 @@ return {
                     capabilities = capabilities,
                 })
             end,
-        })
+            ["volar"] = function()
+              nvim_lsp["volar"].setup({
+              capabilities = capabilities,
+              on_attach = on_attach,
+              filetypes = {
+                "typescript",
+                "javascript",
+                "javascriptreact",
+                "typescriptreact",
+                "vue",
+              },
+            })
+          end
+    })
     end,
 }
 

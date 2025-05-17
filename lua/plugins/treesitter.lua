@@ -35,6 +35,7 @@ return {
                 "c",
                 "rust",
                 "go",
+                "vue",
             },
             incremental_selection = {
                 enable = true,
