@@ -1,6 +1,6 @@
 return {
   {
-    "drewtempelmeyer/palenight.vim",
+    "EdenEast/nightfox.nvim",
     lazy = true,
   }
 }
