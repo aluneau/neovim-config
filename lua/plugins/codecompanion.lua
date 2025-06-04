@@ -22,7 +22,7 @@ return {
           },
           schema = {
             model = {
-              default = "mistral",
+              default = "incept5/llama3.1-claude",
             },
             num_ctx = {
               default = 16384,

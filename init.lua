@@ -28,4 +28,4 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, { desc = 'Telescope jumplist'})
 vim.keymap.set("n", "<leader>cc", "<cmd>CodeCompanion<cr>", { desc = "Code Companion Chat" })
-
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
